@@ -9,7 +9,6 @@
     let
       hello_overlay = final: prev: rec {
         hellolib = final.callPackage ./hellolib.nix { };
-        hello = final.callPackage ./default.nix { inherit hellolib; };
       };
 
       my_overlays = [ hello_overlay ];
